@@ -4,7 +4,8 @@ import "./LandingPage.css"
 
 export default function LandingPage() {
   return (
-    <div className='cardContainer'>
+    // <div className='container'>
+      <div className='cardContainer'>
       {
         products.map((item) => (
           <div className='card'>
@@ -16,7 +17,9 @@ export default function LandingPage() {
           </div>
         ))
       }
-    </div>
+      </div>
+    // </div>
+    
   )
 }
 
