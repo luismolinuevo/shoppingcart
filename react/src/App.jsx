@@ -18,7 +18,11 @@ function App() {
       path: "/",
       element: <Layout/>,
       children: [
-        
+        {
+          path: "/",
+          element: <LandingPage/>
+        }
+
       ]
     }
   ])
