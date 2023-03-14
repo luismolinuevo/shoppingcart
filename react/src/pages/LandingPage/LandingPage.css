@@ -1,8 +1,10 @@
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .card {
     margin: 15px;
+    flex: 1 1 0px; /*this made it even. Flex grow, flex shrink, flex basis*/
 }
