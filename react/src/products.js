@@ -1,0 +1,86 @@
+const products = [
+    {
+      id: 1,
+      name: "Blue T-Shirt",
+      category: "Clothing",
+      price: 29.99,
+      description: "A stylish blue t-shirt made from high-quality cotton.",
+      image: "https://via.placeholder.com/300x200?text=Blue+T-Shirt",
+    },
+    {
+      id: 2,
+      name: "Red Hoodie",
+      category: "Clothing",
+      price: 49.99,
+      description: "Stay warm and cozy with this comfortable red hoodie.",
+      image: "https://via.placeholder.com/300x200?text=Red+Hoodie",
+    },
+    {
+      id: 3,
+      name: "Leather Wallet",
+      category: "Accessories",
+      price: 39.99,
+      description: "A sleek leather wallet with multiple card slots and a bill compartment.",
+      image: "https://via.placeholder.com/300x200?text=Leather+Wallet",
+    },
+    {
+      id: 4,
+      name: "Wireless Headphones",
+      category: "Electronics",
+      price: 99.99,
+      description: "Experience high-quality sound with these wireless headphones.",
+      image: "https://via.placeholder.com/300x200?text=Wireless+Headphones",
+    },
+    {
+      id: 5,
+      name: "Smartwatch",
+      category: "Electronics",
+      price: 149.99,
+      description: "Stay connected with this sleek and functional smartwatch.",
+      image: "https://via.placeholder.com/300x200?text=Smartwatch",
+    },
+    {
+      id: 6,
+      name: "Stainless Steel Water Bottle",
+      category: "Accessories",
+      price: 19.99,
+      description: "Stay hydrated on the go with this durable stainless steel water bottle.",
+      image: "https://via.placeholder.com/300x200?text=Water+Bottle",
+    },
+    {
+      id: 7,
+      name: "Black Sneakers",
+      category: "Footwear",
+      price: 79.99,
+      description: "Get ready for any adventure with these stylish black sneakers.",
+      image: "https://via.placeholder.com/300x200?text=Black+Sneakers",
+    },
+    {
+      id: 8,
+      name: "Running Shoes",
+      category: "Footwear",
+      price: 99.99,
+      description: "Stay comfortable and supported during your next run with these shoes.",
+      image: "https://via.placeholder.com/300x200?text=Running+Shoes",
+    },
+    {
+      id: 9,
+      name: "Travel Backpack",
+      category: "Bags",
+      price: 69.99,
+      description: "Pack everything you need for your next adventure in this spacious backpack.",
+      image: "https://via.placeholder.com/300x200?text=Travel+Backpack",
+    },
+    {
+      id: 10,
+      name: "Messenger Bag",
+      category: "Bags",
+      price: 49.99,
+      description: "A stylish and functional messenger bag for everyday use.",
+      image: "https://via.placeholder.com/300x200?text=Messenger+Bag",
+    },
+  ];
+
+
+
+export default products;
