@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 export default function Cart() {
     const dispatch = useDispatch();  //this lets me use dispatch
     const items = useSelector(state => state.cart.items);   //gives me access to the array
+    const totalCost = useSelector(state => state.cart.totalCost);
     // const totalPrice = useSelector(state => state.cart.totalPrice);
 
     const handleAdd = (items) => {
@@ -13,12 +14,17 @@ export default function Cart() {
     const handleDelete = (items) => {
         dispatch(removeItem(items));
     }
-    const handleCart = () => {
+    const handleClear = () => {
         dispatch(clearCart())
     }
 
   return (
     <div>
+        <h1>Shopping Cart</h1>
+        <div>
+            <p>{totalCost}</p>
+            <button onClick={() => handleClear}></button>
+        </div>
         {
             items.map(item => (
                 <div>
@@ -38,6 +44,7 @@ export default function Cart() {
                 </div>
             ))
         }
+
     </div>
   )
 }
