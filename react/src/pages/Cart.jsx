@@ -1,5 +1,5 @@
 import React from 'react';
-import { addItem, removeItem, clearCart } from '../redux/cartSlice';
+import { addToCart, removeItem, clearCart } from '../redux/cartSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
 export default function Cart() {
@@ -8,7 +8,7 @@ export default function Cart() {
     // const totalPrice = useSelector(state => state.cart.totalPrice);
 
     const handleAdd = (items) => {
-        dispatch(addItem(items));
+        dispatch(addToCart(items));
     }
     const handleDelete = (items) => {
         dispatch(removeItem(items));
