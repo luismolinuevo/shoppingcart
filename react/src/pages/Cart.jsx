@@ -26,6 +26,7 @@ export default function Cart() {
                     <div>
                         <p>{item.name}</p>
                         <p>{item.category}</p>
+                        <p>${item.price}</p>
                         <p>Qty: {item.count}</p>
                         <div>
                             <button onClick={() => handleAdd(item)}>+</button>
