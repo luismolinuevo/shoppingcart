@@ -29,7 +29,7 @@ export default function Cart() {
                         <p>Qty: {item.count}</p>
                         <div>
                             <button onClick={() => handleAdd(item)}>+</button>
-                            <button onClick={() => handleDelete(item)}>-</button>
+                            <button onClick={() => handleDelete(item.id)}>-</button>
                         </div>
                     </div>
                     
