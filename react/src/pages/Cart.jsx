@@ -18,33 +18,39 @@ export default function Cart() {
         dispatch(clearCart())
     }
 
-  return (
-    <div>
-        <h1>Shopping Cart</h1>
-        <div>
-            {items.length >= 1 ? <p>${totalCost.toFixed(2)}</p> : <p>$0</p>}
-            <button onClick={() => handleClear}></button>
-        </div>
-        {
-            items.map(item => (
+    return (
+        <section className="pt-10">
+            <div className="px-10 sm:px-15">
                 <div>
-                    <img src={item.image} alt="image" />
+                    <h1 className="text-center text-3xl">Shopping Cart</h1>
                     <div>
-                        <p>{item.name}</p>
-                        <p>{item.category}</p>
-                        <p>${item.price.toFixed(2)}</p>
-                        <p>Qty: {item.count}</p>
-                        <div>
-                            <button onClick={() => handleAdd(item)}>+</button>
-                            <button onClick={() => handleDelete(item.id)}>-</button>
-                        </div>
+                        {items.length >= 1 ? <p>${totalCost.toFixed(2)}</p> : <p>$0</p>}
+                        <button onClick={() => handleClear}></button>
                     </div>
-                    
-                    
-                </div>
-            ))
-        }
+                    {
+                        items.map(item => (
+                            <div className="flex border-b border-black py-8">
+                                <img src={item.image} alt="image" />
+                                <div className="pl-4">
+                                    <p className='text-2xl'>{item.name}</p>
+                                    <p className='text-xl'>{item.category}</p>
+                                    <p className='text-lg'>${item.price.toFixed(2)}</p>
+                                    <p>Qty: {item.count}</p>
+                                    <div>
+                                        <button onClick={() => handleAdd(item)}>+</button>
+                                        <button onClick={() => handleDelete(item.id)}>-</button>
+                                    </div>
+                                </div>
 
-    </div>
-  )
+
+                            </div>
+                        ))
+                    }
+
+                </div>
+            </div>
+        </section>
+
+
+    )
 }
