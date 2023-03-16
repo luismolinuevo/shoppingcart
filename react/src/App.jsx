@@ -9,7 +9,7 @@ import {
   Outlet,
   createRoutesFromElements,
 } from "react-router-dom";
-import LandingPage from "./pages/LandingPage/LandingPage.jsx"
+import LandingPage from "./pages/LandingPage.jsx"
 import Layout from './componets/Layout';
 import Cart from './pages/Cart';
 

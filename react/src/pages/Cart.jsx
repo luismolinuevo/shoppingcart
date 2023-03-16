@@ -22,7 +22,7 @@ export default function Cart() {
     <div>
         <h1>Shopping Cart</h1>
         <div>
-            <p>{totalCost}</p>
+            {items.length >= 1 ? <p>${totalCost.toFixed(2)}</p> : <p>$0</p>}
             <button onClick={() => handleClear}></button>
         </div>
         {

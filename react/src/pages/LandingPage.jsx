@@ -1,7 +1,7 @@
 import React from 'react'
-import products from '../../products'
-import "./LandingPage.css"
-import { addToCart } from '../../redux/cartSlice'
+import products from '../products'
+
+import { addToCart } from '../redux/cartSlice'
 import { useDispatch } from 'react-redux'
 
 export default function LandingPage() {
