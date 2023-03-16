@@ -8,7 +8,7 @@ export default function LandingPage() {
       <div className='cardContainer'>
       {
         products.map((item) => (
-          <div className='card'>
+          <div className='card' key={item.id}>
             <img src={item.image}/>
             <h1>{item.name}</h1>
             <p>{item.category}</p>
