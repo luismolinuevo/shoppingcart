@@ -9,7 +9,7 @@ export default function Navbar() {
         <h1 className='logo'>Wamazon</h1>
         <div>
           <input type='search' placeholder='Search for products' className='searchBar' />
-          <Link to="/shoppingcart">Cart</Link>
+          <Link to="/cart">Cart</Link>
         </div>
       </div>
     </div>

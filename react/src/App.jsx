@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage.jsx"
 import Layout from './componets/Layout';
+import Cart from './pages/Cart';
 
 function App() {
   const router = createBrowserRouter([
@@ -21,6 +22,10 @@ function App() {
         {
           path: "/",
           element: <LandingPage/>
+        },
+        {
+          path: "/cart",
+          element: <Cart/>
         }
 
       ]

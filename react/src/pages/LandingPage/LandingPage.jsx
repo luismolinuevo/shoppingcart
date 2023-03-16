@@ -20,7 +20,7 @@ export default function LandingPage() {
             <h1>{item.name}</h1>
             <p>{item.category}</p>
             <p>{item.price}</p>
-            <button onClick={() => handleAdd(item)}>Add to Cart</button>
+            <button onClick={() => handleAdd(item)}>Add to Cart</button>  
           </div>
         ))
       }
@@ -29,4 +29,6 @@ export default function LandingPage() {
     
   )
 }
+
+//Without adding the () => to the onclick is was adding everything in the cart. But now it only adds that specific item.
 

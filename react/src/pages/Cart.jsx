@@ -20,9 +20,20 @@ export default function Cart() {
   return (
     <div>
         {
-            items.map((item) => (
+            items.map(item => (
                 <div>
-                    <p>{item.name}</p>
+                    <img src={item.image} alt="image" />
+                    <div>
+                        <p>{item.name}</p>
+                        <p>{item.category}</p>
+                        <p>Qty: {item.count}</p>
+                        <div>
+                            <button onClick={() => handleAdd(item)}>+</button>
+                            <button onClick={() => handleDelete(item)}>-</button>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
             ))
         }
