@@ -18,6 +18,7 @@ module.exports = {
       },
       colors: {
         'headercolor': '#181c24',
+        'bgcolor': "#e3e6e6"
       },    
     },
   },
