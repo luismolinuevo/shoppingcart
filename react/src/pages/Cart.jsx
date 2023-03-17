@@ -40,10 +40,10 @@ export default function Cart() {
                                         <p className='text-lg'>Quantity</p>
                                     </div>
                                     <div className='h-full flex items-center md:justify-center pt-4 md:p-0'>
-                                        <div className='flex border-x-2 border black p-1 md:p-2'>
-                                            <button className=' text-md md:text-xl p-1' onClick={() => handleAdd(item)}>+</button>
-                                            <p className='text-md md:text-xl p-1'>{item.count}</p>
-                                            <button className='text-md md:text-xl p-1' onClick={() => handleDelete(item.id)}>-</button>
+                                        <div className='flex border border-black p-1 md:p-2 '>
+                                            <button className=' text-lg md:text-xl p-1' onClick={() => handleAdd(item)}>+</button>
+                                            <p className='text-lg md:text-xl p-1'>{item.count}</p>
+                                            <button className='text-lg md:text-xl p-1' onClick={() => handleDelete(item.id)}>-</button>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@ export default function Cart() {
 
                             ?
 
-                            <div className='flex justify-between items-center pt-4'>
+                            <div className='flex justify-between items-center py-4'>
 
                                 <button className="whitespace-nowrap p-1 bg-blue-500" onClick={() => handleClear()}>Clear Cart</button>
 
