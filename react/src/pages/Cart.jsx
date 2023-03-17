@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { addToCart, removeItem, clearCart } from '../redux/cartSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
 
 export default function Cart() {
     const dispatch = useDispatch();  //this lets me use dispatch
-    const [totalPrice, setTotalPrice] = useState(0);
     const items = useSelector(state => state.cart.items);   //gives me access to the array
-    const totalCost = useSelector(state => state.cart.totalCost);
-    // const totalPrice = useSelector(state => state.cart.totalPrice);
+    const totalCost = useSelector(state => state.cart.totalCost.toFixed(2));
+
 
     const handleAdd = (items) => {
         dispatch(addToCart(items));
@@ -24,10 +24,6 @@ export default function Cart() {
             <div className="px-5 sm:px-15">
                 <div>
                     <h1 className="text-center text-3xl">Shopping Cart</h1>
-                    {/* <div>
-                        {items.length >= 1 ? <p>${totalCost.toFixed(2)}</p> : <p>$0</p>}
-                        <button onClick={() => handleClear}></button>
-                    </div> */}
                     {
                         items.map(item => (
                             <div className=' flex border-b border-black py-8 flex-col md:flex-row'>
@@ -60,6 +56,40 @@ export default function Cart() {
                         ))
                     }
 
+                    {
+                        items.length >= 1 
+
+                        ?
+
+                        <div className='flex justify-between items-center pt-4'>
+
+                        <button className="whitespace-nowrap p-1 bg-blue-500" onClick={() => handleClear()}>Clear Cart</button>    
+
+                        <div className="w-2/6 flex justify-end">
+                            <div className='w-full'>
+                                <div className=' flex justify-between pb-2'>
+                                    <p className=''>Subtotal</p>
+                                    <p>${totalCost}</p>
+                                </div>
+                                <div>
+                                    <button className='w-full h-10 border-x-2 bg-blue-500'>Checkout</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    :
+
+                    <div className=' pt-8 text-center '>
+                        <h1 className='text-3xl'>Shopping Cart is Empty</h1>
+                        <Link to="/" className='text-xl text-blue-500'>Continue Shopping</Link>
+                    </div>
+                    }
+                    
+
+
                 </div>
             </div>
         </section>
@@ -67,3 +97,5 @@ export default function Cart() {
 
     )
 }
+
+//whitespace-nowrap fix the issue where the world will have a new line after every word
