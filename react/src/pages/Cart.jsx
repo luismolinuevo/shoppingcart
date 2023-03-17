@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { addToCart, removeItem, clearCart } from '../redux/cartSlice';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -20,8 +20,8 @@ export default function Cart() {
     }
 
     return (
-        <section className="pt-10 px-20">
-            <div className="px-10 sm:px-15">
+        <section className="pt-10 md:px-20">
+            <div className="px-5 sm:px-15">
                 <div>
                     <h1 className="text-center text-3xl">Shopping Cart</h1>
                     {/* <div>
@@ -30,32 +30,31 @@ export default function Cart() {
                     </div> */}
                     {
                         items.map(item => (
-                            <div className=' flex border-b border-black py-8'>
-                                <div className=" flex">
-                                    <img src={item.image} alt="image" />
+                            <div className=' flex border-b border-black py-8 flex-col md:flex-row'>
+                                <div className="flex">
+                                    <img src={item.image} alt="image" className="w-32 md:w-60" />
                                     <div className="pl-4">
-                                        <p className='text-2xl'>{item.name}</p>
-                                        <p className='text-xl'>{item.category}</p>
-                                        <p className='text-lg'>${item.price.toFixed(2)}</p>
+                                        <p className='text-xl sm:text-2xl'>{item.name}</p>
+                                        <p className='text-lg sm:text-xl'>{item.category}</p>
+                                        <p className='text-md sm:text-lg'>${item.price.toFixed(2)}</p>
                                     </div>
                                 </div>
-                                <div className="w-full flex items-center flex-col">
-                                    <div>
+                                <div className="w-full md:flex items-center md:justify-center md:flex-col">
+                                    <div className='hidden md:block'>
                                         <p className='text-lg'>Quantity</p>
                                     </div>
-                                    <div className='h-full flex items-center justify-center '>
-                                        <div className=' flex border-x-2  border black p-2'>
-                                        <button className='text-xl p-1' onClick={() => handleAdd(item)}>+</button>
-                                        <p className='text-xl p-1'>{item.count}</p>
-                                        <button className='text-xl p-1' onClick={() => handleDelete(item.id)}>-</button>
+                                    <div className='h-full flex items-center md:justify-center pt-4 md:p-0'>
+                                        <div className='flex border-x-2 border black p-1 md:p-2'>
+                                            <button className=' text-md md:text-xl p-1' onClick={() => handleAdd(item)}>+</button>
+                                            <p className='text-md md:text-xl p-1'>{item.count}</p>
+                                            <button className='text-md md:text-xl p-1' onClick={() => handleDelete(item.id)}>-</button>
                                         </div>
-                                      
                                     </div>
                                 </div>
-                                <div>
+                                <div className='hidden md:block'>
                                     <p className='text-lg'>Total</p>
                                     <p className='h-full flex items-center'>${item.total.toFixed(2)}</p>
-                                </div>    
+                                </div>
                             </div>
 
                         ))
