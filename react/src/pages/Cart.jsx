@@ -20,7 +20,7 @@ export default function Cart() {
     }
 
     return (
-        <section className="pt-10">
+        <section className="pt-10 px-20">
             <div className="px-10 sm:px-15">
                 <div>
                     <h1 className="text-center text-3xl">Shopping Cart</h1>
@@ -28,11 +28,6 @@ export default function Cart() {
                         {items.length >= 1 ? <p>${totalCost.toFixed(2)}</p> : <p>$0</p>}
                         <button onClick={() => handleClear}></button>
                     </div> */}
-                    <div className="flex justify-between">
-                        <p>Product</p>
-                        <p>Quantity</p>
-                        <p>Total Price</p>
-                    </div>
                     {
                         items.map(item => (
                             <div className=' flex border-b border-black py-8'>
@@ -44,13 +39,22 @@ export default function Cart() {
                                         <p className='text-lg'>${item.price.toFixed(2)}</p>
                                     </div>
                                 </div>
-                                <div className=" w-full flex justify-center items-center">
-                                    <button onClick={() => handleAdd(item)}>+</button>
-                                    <p>Qty: {item.count}</p>
-                                    <button onClick={() => handleDelete(item.id)}>-</button>
+                                <div className="w-full flex items-center flex-col">
+                                    <div>
+                                        <p className='text-lg'>Quantity</p>
+                                    </div>
+                                    <div className='h-full flex items-center justify-center '>
+                                        <div className=' flex border-x-2  border black p-2'>
+                                        <button className='text-xl p-1' onClick={() => handleAdd(item)}>+</button>
+                                        <p className='text-xl p-1'>{item.count}</p>
+                                        <button className='text-xl p-1' onClick={() => handleDelete(item.id)}>-</button>
+                                        </div>
+                                      
+                                    </div>
                                 </div>
                                 <div>
-                                    <p>${item.total.toFixed(2)}</p>
+                                    <p className='text-lg'>Total</p>
+                                    <p className='h-full flex items-center'>${item.total.toFixed(2)}</p>
                                 </div>    
                             </div>
 
