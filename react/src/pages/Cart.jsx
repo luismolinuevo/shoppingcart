@@ -61,7 +61,7 @@ export default function Cart() {
 
                             ?
 
-                            <div className='flex justify-between items-center py-4'>
+                            <div className='flex justify-between items-center py-8'>
 
                                 <button className="whitespace-nowrap p-1 bg-blue-500" onClick={() => handleClear()}>Clear Cart</button>
 
