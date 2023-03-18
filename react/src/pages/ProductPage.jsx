@@ -4,12 +4,15 @@ import { useParams } from 'react-router-dom';
 import products from "../products"
 import { addToCart } from '../redux/cartSlice'
 import { useDispatch } from 'react-redux'
+import {clearSearch} from "../redux/productSlice"
 
 export default function ProductPage() {
+    const dispatch = useDispatch();
+    dispatch(clearSearch());   //this will clear search when users get on this page
+
     const params = useParams();
     const item = products.find(i => i.id === parseInt(params.productId))
-
-    const dispatch = useDispatch();
+    
     const handleAdd = (items) => {
       console.log(items)
       dispatch(addToCart(items));
@@ -17,7 +20,7 @@ export default function ProductPage() {
 
   return (
     <div className='flex justify-center'>
-        <div className="px-10 sm:px-15">
+        <div className="px-10 sm:px-15 ">
         <div className='flex flex-col md:flex-row py-20'>
             <img className="w-52 md:w-72"src={item.image}/>
             <div className='md:pl-12 pt-4'>

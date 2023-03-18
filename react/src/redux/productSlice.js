@@ -20,8 +20,12 @@ const productSlice = createSlice({
                 
         },
 
+        clearSearch: (state) => {
+            state.searchProducts = null
+        }
+
     }
 })
 
-export const {getProducts} = productSlice.actions;
+export const {getProducts, clearSearch} = productSlice.actions;
 export default productSlice.reducer;

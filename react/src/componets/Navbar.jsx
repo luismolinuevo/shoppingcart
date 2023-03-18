@@ -26,17 +26,19 @@ export default function Navbar() {
                 {
                   searchedItem &&
                   searchedItem.map((item) => (
-                    <div className='bg-white py-2 border-b border-black'>
-                      <div className='flex'>
-                        <img src={item.image} className="w-1/2" />
-                        <div className='flex flex-col pl-1'>
-                          <p className='text-md'>{item.name}</p>
-                          <p>{item.category}</p>
-                          <p>{item.price}</p>
-                        </div>
+                    <Link to={`/${item.id}`}>
+                      <div className='bg-white py-2 border-b border-black'>
+                        <div className='flex'>
+                          <img src={item.image} className="w-1/2" />
+                          <div className='flex flex-col pl-1'>
+                            <p className='text-md'>{item.name}</p>
+                            <p>{item.category}</p>
+                            <p>{item.price}</p>
+                          </div>
 
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))
 
 
