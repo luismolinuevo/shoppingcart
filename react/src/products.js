@@ -5,7 +5,7 @@ const products = [
       category: "Clothing",
       price: 29.99,
       description: "A stylish blue t-shirt made from high-quality cotton.",
-      image: "https://via.placeholder.com/300x200?text=Blue+T-Shirt",
+      image: "https://t4.ftcdn.net/jpg/03/58/67/67/360_F_358676775_IIbdzYvPG0dFk9ZNFmeMqCoNvJqGqQMz.jpg",
     },
     {
       id: 2,
@@ -13,7 +13,7 @@ const products = [
       category: "Clothing",
       price: 49.99,
       description: "Stay warm and cozy with this comfortable red hoodie.",
-      image: "https://via.placeholder.com/300x200?text=Red+Hoodie",
+      image: "https://cdn.shopify.com/s/files/1/2072/5133/products/Hoodie_PrimaryRed_Front_446_264f680c-ba7f-4dc7-bb33-b7ace4ca3ee1_700x700.jpg?v=1657321470",
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ const products = [
       category: "Accessories",
       price: 39.99,
       description: "A sleek leather wallet with multiple card slots and a bill compartment.",
-      image: "https://via.placeholder.com/300x200?text=Leather+Wallet",
+      image: "https://cdn.shopify.com/s/files/1/0712/1227/products/cognac-bifold-leather-wallet-portland-leather-16103142752338_900x.jpg?v=1674069389",
     },
     {
       id: 4,
@@ -29,7 +29,7 @@ const products = [
       category: "Electronics",
       price: 99.99,
       description: "Experience high-quality sound with these wireless headphones.",
-      image: "https://via.placeholder.com/300x200?text=Wireless+Headphones",
+      image: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61ZRU9gnbxL._AC_UF1000,1000_QL80_.jpg",
     },
     {
       id: 5,
@@ -37,7 +37,7 @@ const products = [
       category: "Electronics",
       price: 149.99,
       description: "Stay connected with this sleek and functional smartwatch.",
-      image: "https://via.placeholder.com/300x200?text=Smartwatch",
+      image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/FWVF2?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1580325951999",
     },
     {
       id: 6,
@@ -45,7 +45,7 @@ const products = [
       category: "Accessories",
       price: 19.99,
       description: "Stay hydrated on the go with this durable stainless steel water bottle.",
-      image: "https://via.placeholder.com/300x200?text=Water+Bottle",
+      image: "https://nutritionaltherapy.com/wp-content/uploads/2022/04/stainless-steel-water-bottle-white-17oz-back-624742eb7dd24.jpg",
     },
     {
       id: 7,
@@ -53,7 +53,7 @@ const products = [
       category: "Footwear",
       price: 79.99,
       description: "Get ready for any adventure with these stylish black sneakers.",
-      image: "https://via.placeholder.com/300x200?text=Black+Sneakers",
+      image: "https://cdn.shopify.com/s/files/1/0080/1069/4723/products/SM11001910-04005-001_01_1000x1000.jpg?v=1654181160",
     },
     {
       id: 8,
@@ -61,7 +61,7 @@ const products = [
       category: "Footwear",
       price: 99.99,
       description: "Stay comfortable and supported during your next run with these shoes.",
-      image: "https://via.placeholder.com/300x200?text=Running+Shoes",
+      image: "https://i.ebayimg.com/images/g/3iIAAOSwCBVjy0FF/s-l500.jpg",
     },
     {
       id: 9,
@@ -69,7 +69,7 @@ const products = [
       category: "Bags",
       price: 69.99,
       description: "Pack everything you need for your next adventure in this spacious backpack.",
-      image: "https://via.placeholder.com/300x200?text=Travel+Backpack",
+      image: "https://cdn.shopify.com/s/files/1/2986/1172/products/travel-backpack-black-45-1_1024x1024.jpg?v=1675116806",
     },
     {
       id: 10,
@@ -77,7 +77,7 @@ const products = [
       category: "Bags",
       price: 49.99,
       description: "A stylish and functional messenger bag for everyday use.",
-      image: "https://via.placeholder.com/300x200?text=Messenger+Bag",
+      image: "https://cdn.shopify.com/s/files/1/1836/3413/products/canvas-messenger-bags-30624-2_2048x.jpg?v=1652760393",
     },
   ];
 

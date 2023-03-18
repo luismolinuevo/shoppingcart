@@ -15,8 +15,8 @@ export default function LandingPage() {
       <div className='flex flex-wrap justify-center'>
       {
         products.map((item) => (
-          <div className='border-x-2 m-12 p-2 bg-white rounded-xl' key={item.id}>
-            <img className="" src={item.image}/>
+          <div className='border-x-2 m-12 p-2 bg-white rounded-xl h-96 w-80' key={item.id}>
+            <img className="w-full h-3/6" src={item.image}/>
             <h1 className='text-2xl'>{item.name}</h1>
             <p className='text-xl'>{item.category}</p>
             <p className='text-lg'>{item.price}</p>
