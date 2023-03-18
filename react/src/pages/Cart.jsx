@@ -23,7 +23,12 @@ export default function Cart() {
         <section className="pt-10 md:px-20 bg-bgcolor">
             <div className="px-5 sm:px-15">
                 <div>
-                    <Link to="/" className='text-lg md:text-2xl text-blue-500'>Continue Shopping</Link>
+                    {
+                        items >= 1 ?
+                        <Link to="/" className='text-lg md:text-2xl text-blue-500'>Continue Shopping</Link>
+                        : <p></p>
+                    }
+                    
                     <h1 className="text-center text-3xl">Shopping Cart</h1>
                     {
                         items.map(item => (
