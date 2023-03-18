@@ -24,7 +24,7 @@ export default function Cart() {
             <div className="px-5 sm:px-15">
                 <div>
                     {
-                        items >= 1 ?
+                        items.length >= 1 ?
                         <Link to="/" className='text-lg md:text-2xl text-blue-500'>Continue Shopping</Link>
                         : <p></p>
                     }
