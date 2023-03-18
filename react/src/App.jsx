@@ -12,6 +12,7 @@ import {
 import LandingPage from "./pages/LandingPage.jsx"
 import Layout from './componets/Layout';
 import Cart from './pages/Cart';
+import ProductPage from './pages/ProductPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -26,6 +27,10 @@ function App() {
         {
           path: "/cart",
           element: <Cart/>
+        },
+        {
+          path: "/:productId",
+          element: <ProductPage/>
         }
 
       ]
