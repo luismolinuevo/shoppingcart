@@ -28,7 +28,7 @@ export default function Cart() {
                         items.map(item => (
                             <div className=' flex border-b border-black py-8 flex-col md:flex-row'>
                                 <div className="flex">
-                                    <img src={item.image} alt="image" className="w-32 md:w-60" />
+                                    <img src={item.image} alt="image" className="w-36 md:w-60" />
                                     <div className="pl-4">
                                         <p className='text-xl sm:text-2xl'>{item.name}</p>
                                         <p className='text-lg sm:text-xl'>{item.category}</p>
